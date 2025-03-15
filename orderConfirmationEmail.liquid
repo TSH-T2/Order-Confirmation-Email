@@ -890,8 +890,7 @@ We're getting your order ready to be shipped. We will notify you when it has bee
                                             {% endif %}
                                             {% endfor %}
 
-                                            {% # Add shop cash/offer transactions to totals if shopify pay is captured
-                                            and shop cash/offer is not captured yet %}
+                                            
                                             {% if shopify_pay_captured == true and shop_cash_offers_captured == false %}
                                             {% for transaction in transactions %}
                                             {% if transaction.status == "success" %}
